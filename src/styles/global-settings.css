@@ -1,0 +1,20 @@
+body, html { /* These are defaults and can be replaced by hexadecimal color values */
+    scrollbar-base-color: rgba(0, 255, 255, 0);
+    scrollbar-face-color: ThreeDFace;
+    scrollbar-highlight-color: ThreeDHighlight;
+    scrollbar-3dlight-color: ThreeDLightShadow;
+    scrollbar-shadow-color: ThreeDDarkShadow;
+    scrollbar-darkshadow-color: ThreeDDarkShadow;
+    scrollbar-track-color: Scrollbar;
+    scrollbar-arrow-color: ButtonText;
+
+    -ms-scrollbar-base-color: rgba(0, 255, 255, 0);
+    -ms-scrollbar-face-color: ThreeDFace;
+    -ms-scrollbar-highlight-color: ThreeDHighlight;
+    -ms-scrollbar-3dlight-color: ThreeDLightShadow;
+    -ms-scrollbar-shadow-color: ThreeDDarkShadow;
+    -ms-scrollbar-darkshadow-color: ThreeDDarkShadow;
+    -ms-scrollbar-track-color: Scrollbar;
+    -ms-scrollbar-arrow-color: ButtonText;
+
+}
