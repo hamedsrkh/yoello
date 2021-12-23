@@ -14,7 +14,8 @@ export const SubNav: (props: PropTypes) => JSX.Element = (props) => {
             {props.subNavs.map((cat, index) =>
                 <p
                     className={`text-xl font-bold text-center sub-categories cursor-pointer ${props.activeSubNav === index ? 'active' : ''}`}
-                    onClick={() => props.onTabChanged(index)}>
+                    onClick={() => props.onTabChanged(index)}
+                    key={index}>
                     {cat.toUpperCase()}
                 </p>)
             }

@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {faMugHot, faPercent, faSearch, faUtensils} from "@fortawesome/free-solid-svg-icons";
 import {Nav} from "./Nav";
 import styled from 'styled-components';
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {Routes} from "../routes/Routes";
 
 export const NavBar = () => {
     const icons = [faMugHot, faUtensils, faPercent, faSearch]
     const [nav, setNav] = useState(0);
     const navigate = useNavigate()
+
+
+    const location = useLocation()
+    useEffect(() => {
+        let thisRoute = Routes.find((item) => item.path === location.pathname)
+        thisRoute && setNav(thisRoute.index)
+    }, []);
+
 
     return (
         <Container className="flex flex-row items-center relative cursor-pointer">

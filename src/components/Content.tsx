@@ -5,18 +5,20 @@ import {BeerModal} from './BeerModal';
 import styled from "styled-components";
 
 
-interface PropsTypes {
+interface PropTypes {
     beers: Beer[]
 }
 
 
-export const Content: (props: PropsTypes) => JSX.Element = (props) => {
+export const Content: (props: PropTypes & React.HTMLAttributes<HTMLDivElement>) => JSX.Element = (props) => {
     const [selectedBeer, setSelectedBeer] = useState<Beer | undefined>(undefined);
+    const {beers, ...otherProps} = props
     return (
-        <Container>
+        <Container {...otherProps}>
             <div className="flex flex-wrap justify-around p-4">
                 {
-                    props.beers.map((beer) => <Card onClick={() => setSelectedBeer(beer)} key={beer.id} beer={beer}/>)
+                    beers.map((beer, index) => <Card onClick={() => setSelectedBeer(beer)} key={index}
+                                                     beer={beer}/>)
                 }
             </div>
             <BeerModal selected={selectedBeer} onClose={() => {

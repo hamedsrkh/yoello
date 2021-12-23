@@ -1,30 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     Routes as Switch,
-    Route, useLocation,
+    Route, useLocation, useNavigate,
 } from "react-router-dom";
-import {TransitionGroup, CSSTransition} from "react-transition-group";
 import {Routes} from "./Routes";
 import styled from 'styled-components';
-
+import {useSwipeable} from "react-swipeable"
 
 export const RoutesComponent = () => {
     const location = useLocation();
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        location.pathname === "/" && navigate("/beers")
+    }, []);
 
     return (
         <Container>
-            <TransitionGroup component={null}>
-                <CSSTransition key={location.key} timeout={300} classNames={"fade"}>
-                    <Switch>
-                        {Routes.map(
-                            (R, index) => <Route key={index} path={R.path} element={<R.component/>}/>
-                        )}
-                    </Switch>
-                </CSSTransition>
-            </TransitionGroup>
-
+            <Switch>
+                {Routes.map(
+                    (R, index) => <Route key={index} path={R.path} element={<R.component/>}/>
+                )}
+            </Switch>
         </Container>
-    );
+    )
+        ;
 };
 
 const Container = styled.div`

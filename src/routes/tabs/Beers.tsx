@@ -5,10 +5,9 @@ import {useQuery} from "react-query";
 import {getBeers} from "../../api/beer";
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 import {Beer} from '../../types';
-import BounceLoader from 'react-spinners/BounceLoader';
-import ClipLoader from 'react-spinners/ClipLoader';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import FadeLoader from 'react-spinners/FadeLoader';
+import {useSwipeable} from "react-swipeable";
 
 const subNavs = ['all', 'pizza', 'steak']
 
@@ -40,7 +39,7 @@ export const Beers = () => {
                 }
                 setRows((prev) => [...prev, ...data])
                 setOnScrollEnd(false)
-            }, keepPreviousData: true
+            }
         })
 
 
@@ -52,24 +51,37 @@ export const Beers = () => {
         };
     }, [activeSubNav]);
 
-
+    const handlers = useSwipeable({
+        onSwipedLeft: () => {
+            let leftSubNav = activeSubNav + 1
+            if (leftSubNav < subNavs.length) {
+                setActiveSubNav(leftSubNav)
+            }
+        },
+        onSwipedRight: () => {
+            let rightSubNav = activeSubNav - 1
+            if (rightSubNav >= 0) {
+                setActiveSubNav(rightSubNav)
+            }
+        }
+    });
     return (
-        <>
+        <div {...handlers}>
             <SubNav subNavs={subNavs} activeSubNav={activeSubNav}
                     onTabChanged={(active) => setActiveSubNav(active)}/>
             {isLoading && 'Loading...'}
             {isError && 'Error Fetching Data'}
             {isSuccess && <Content beers={rows}/>}
-            {<SpinnerContainer loading={onScrollEnd}><FadeLoader color={"#e74c3c"} loading={onScrollEnd} css={Spinner}/></SpinnerContainer>}
-        </>
+            {<SpinnerContainer scroll={onScrollEnd}><FadeLoader color={"#e74c3c"} loading={onScrollEnd} css={Spinner}/></SpinnerContainer>}
+        </div>
     );
 };
 
-const SpinnerContainer = styled.div<{ loading: boolean }>`
+const SpinnerContainer = styled.div<{ scroll?: boolean }>`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: ${props => props.loading ? "100px" : "0"};
+  padding-bottom: ${props => (props.scroll ? "100px" : "0")};
 `
 
 const Spinner = `

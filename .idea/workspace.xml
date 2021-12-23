@@ -2,28 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f8743be-97aa-4714-ac22-1a06a668f1d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uiComponents/Card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uiComponents/Center.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uiComponents/Modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uiComponents/SubNav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/RoutesComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fade-effect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global-settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BeerModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BeerModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShoppingCart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShoppingCart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/uiComponents/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/uiComponents/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/uiComponents/SubNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/uiComponents/SubNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/RoutesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/RoutesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/tabs/Beers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/tabs/Beers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fade-effect.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +33,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -107,7 +101,8 @@
       <workItem from="1640094031114" duration="13000" />
       <workItem from="1640095333406" duration="53000" />
       <workItem from="1640095401118" duration="21721000" />
-      <workItem from="1640158984951" duration="46854000" />
+      <workItem from="1640158984951" duration="46944000" />
+      <workItem from="1640239034685" duration="16060000" />
     </task>
     <servers />
   </component>

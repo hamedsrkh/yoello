@@ -2,6 +2,8 @@ import React, {useEffect, useLayoutEffect} from 'react';
 import {Modal} from "./uiComponents/Modal";
 import {Beer} from "../types";
 import styled from "styled-components";
+import {useAppDispatch, useAppSelector} from "../store/hooks";
+import {addToCart} from "../store/cart";
 
 export interface PropTypes {
     selected: Beer | undefined,
@@ -9,14 +11,16 @@ export interface PropTypes {
 }
 
 export const BeerModal: (props: PropTypes) => JSX.Element = ({selected, onClose}) => {
-
+    const dispatch = useAppDispatch()
+    const cart = useAppSelector(state => state.cart)
     return (
         <>
             {
                 selected &&
                 <Modal onClose={onClose} show={true}>
                     <>
-                        <img className="object-contain bg-white rounded float-right w-28 h-28 p-2" src={selected.image_url}/>
+                        <img className="object-contain bg-white rounded float-right w-28 h-28 p-2"
+                             src={selected.image_url}/>
                         <div className="w-6/12">
                             <p className="text-2xl text-white">{selected.name}</p>
                             <br/>
@@ -25,7 +29,7 @@ export const BeerModal: (props: PropTypes) => JSX.Element = ({selected, onClose}
                             <p>{selected.description}</p>
                             <p>{selected.food_pairing}</p>
                         </div>
-                        <Button>Add to Cart</Button>
+                        <Button onClick={() => dispatch(addToCart(selected))}>Add to Cart</Button>
                     </>
                 </Modal>
             }
