@@ -11,10 +11,12 @@ export const useInfiniteScroll: UseInfiniteScroll = ({callback, offset = 0}) => 
     useEffect(() => {
         function handleScroll() {
 
-            
+
+            let left = window.innerHeight + document.documentElement.scrollTop
+            let right = document.documentElement.offsetHeight + offset
             if (
-                window.innerHeight + document.documentElement.scrollTop >=
-                document.documentElement.offsetHeight + offset &&
+                Math.abs(left - right) <= 20
+                &&
                 !isFetching
             ) {
                 callback()
