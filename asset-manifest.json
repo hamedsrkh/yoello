@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/yoello/static/css/main.c297e93c.css",
-    "main.js": "/yoello/static/js/main.5fc44e74.js",
+    "main.js": "/yoello/static/js/main.507e508b.js",
     "index.html": "/yoello/index.html",
     "main.c297e93c.css.map": "/yoello/static/css/main.c297e93c.css.map",
-    "main.5fc44e74.js.map": "/yoello/static/js/main.5fc44e74.js.map"
+    "main.507e508b.js.map": "/yoello/static/js/main.507e508b.js.map"
   },
   "entrypoints": [
     "static/css/main.c297e93c.css",
-    "static/js/main.5fc44e74.js"
+    "static/js/main.507e508b.js"
   ]
 }
